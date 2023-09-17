@@ -144,8 +144,9 @@ def new_lando_entry ():
 
 x = 0
 
-while (1):
+while (1): 
     x+=1
+    print(x)
     handle_registration()
     handle_logut()
     handle_go_to_registration_page()
@@ -159,4 +160,4 @@ while (1):
       time.sleep(2)
       handle_reset()
       new_lando_entry()
-      x=0
+      x-=100
