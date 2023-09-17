@@ -109,12 +109,15 @@ def holder ():
 
 def handle_reset ():
     pyautogui.click(url_x, url_y)
+    time.sleep(2)
     keyboard.type("192.168.1.1")
     pyautogui.press("enter")
-    time.sleep(2) 
+    time.sleep(4) 
     pyautogui.click(900, 380)
     keyboard.type("9Q6G3TZE")
-    pyautogui.click(900, 430) 
+    time.sleep(2)
+    pyautogui.click(940, 430) 
+    time.sleep(2)
     pyautogui.click(350, 80)
     time.sleep(3) 
     pyautogui.press("del")
@@ -122,9 +125,11 @@ def handle_reset ():
     pyautogui.press("enter")
     time.sleep(3)
     pyautogui.click(950, 540)
+    time.sleep(1)
     pyautogui.hotkey('shift', 'command', 'w')
     time.sleep(1)
     pyautogui.click(500, 20)
+    time.sleep(1)
     pyautogui.hotkey('shift', 'command', 'n')
     time.sleep(360) 
 
@@ -140,15 +145,18 @@ def new_lando_entry ():
 x = 0
 
 while (1):
-    x+=100
+    x+=1
     handle_registration()
     handle_logut()
     handle_go_to_registration_page()
-    if x == 1:
+    if x == 100:
+      time.sleep(2)
       pyautogui.hotkey('shift', 'command', 'w')
-      time.sleep(1)
-      pyautogui.click(500, 20)
+      time.sleep(2)
+      pyautogui.click(500, 40)
+      time.sleep(2)
       pyautogui.hotkey('shift', 'command', 'n')
+      time.sleep(2)
       handle_reset()
       new_lando_entry()
       x=0
